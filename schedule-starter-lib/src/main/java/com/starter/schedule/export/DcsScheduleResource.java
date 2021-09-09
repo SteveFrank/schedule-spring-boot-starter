@@ -154,7 +154,7 @@ public class DcsScheduleResource {
     }
 
     public void pushInstruct(Instruct instruct) throws Exception {
-        setData("/com/starter/global/schedule/exec", instruct);
+        setData(path_root_exec, instruct);
     }
 
 

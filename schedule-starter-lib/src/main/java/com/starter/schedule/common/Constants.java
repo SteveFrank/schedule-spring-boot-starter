@@ -28,7 +28,7 @@ public class Constants {
         public static String schedulerServerId;     //任务服务ID；  工程名称En
         public static String schedulerServerName;   //任务服务名称；工程名称Ch
         public static CuratorFramework client;      //zk配置；client
-        public static String path_root = "/com/starter/global/schedule";   //zk配置；根目录
+        public static String path_root = "/smart_schedule";   //zk配置；根目录
         public static String path_root_exec = path_root + "/exec";
         public static String path_root_server;
         public static String path_root_server_ip;

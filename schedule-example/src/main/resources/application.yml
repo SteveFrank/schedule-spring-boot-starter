@@ -3,12 +3,12 @@ server:
 
 spring:
   application:
-    name: schedule-spring-boot-starter-test
+    name: smart_schedule_example
 
 # 自定义中间件配置
 middleware:
   schedule:
     zkAddress: 127.0.0.1:2181
-    schedulerServerId: schedule-spring-boot-starter-test
-    schedulerServerName: 分布式任务测试
+    schedulerServerId: smart_schedule_example_01
+    schedulerServerName: 分布式任务调度框架测试
 

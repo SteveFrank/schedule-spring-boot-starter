@@ -12,6 +12,7 @@ import org.slf4j.LoggerFactory;
 import org.springframework.stereotype.Component;
 
 import java.lang.reflect.Method;
+
 /**
  * @author frankq
  * @date 2021/9/8
@@ -20,7 +21,7 @@ import java.lang.reflect.Method;
 @Component("middleware-schedule")
 public class DoJoinPoint {
 
-    private Logger logger = LoggerFactory.getLogger(DoJoinPoint.class);
+    private static final Logger LOG = LoggerFactory.getLogger(DoJoinPoint.class);
 
     @Pointcut("@annotation(com.starter.schedule.annotation.DcsScheduled)")
     public void aopPoint() {
@@ -34,7 +35,7 @@ public class DoJoinPoint {
             return jp.proceed();
         } finally {
             long end = System.currentTimeMillis();
-            logger.info("\n middleware schedule method：{}.{} take time(m)：{}", jp.getTarget().getClass().getSimpleName(), method.getName(), (end - begin));
+            LOG.info("\n middleware schedule method：{}.{} take time(m)：{}", jp.getTarget().getClass().getSimpleName(), method.getName(), (end - begin));
         }
     }
 
